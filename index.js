@@ -21,8 +21,18 @@ function addNumberToResult(event) {
   }
 }
 
+function clearMemory() {
+  lastOperation = null;
+  lastResult = null;
+}
+
 function clearResult() {
   document.getElementById('result').value = "0"
+}
+
+function clearAll() {
+  clearMemory()
+  clearResult()
 }
 
 function saveOperationAndValue(event) {
@@ -81,6 +91,5 @@ function showResult() {
 
   // After clicking equals ans showing the result
   // we want to restart, no saved operations/results
-  lastResult = null;
-  lastOperation = null;
+  clearMemory()
 }
