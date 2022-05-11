@@ -4,9 +4,9 @@ body {
 }
 
 #calculator {
-  width: 424px;
+  width: 416px;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 12%;
 }
 
 button {
@@ -30,7 +30,7 @@ button.function-button {
 }
 
 #result {
-  width: 94%;
+  width: 400px;
   height: 70px;
   font-size: 60px;
   text-align: right;
@@ -41,5 +41,5 @@ button.function-button {
   border: none;
   font-family: inherit;
   padding-right: 14px;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
 }
