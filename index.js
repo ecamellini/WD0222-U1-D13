@@ -1,7 +1,7 @@
 // A MEMORY FOR OUR CALCULATOR
 // This is the memory where we store the previous results.
-let lastResult;
-let lastOperation;
+let lastResult = null;
+let lastOperation = null;
 // These variables are declared outside every function.
 // This means that:
 // -- They will be visible, available, for the entire program
@@ -29,12 +29,17 @@ function saveOperationAndValue(event) {
   let clickedButton = event.target
 
   lastOperation = clickedButton.innerText
-  lastResult = document.getElementById('result').value
+
+  if(lastResult === null) {
+    lastResult = document.getElementById('result').value
+  } else {
+    executeLastOperation()
+  }
 
   clearResult()
 }
 
-function showNextResult() {
+function executeLastOperation() {
   let resultNode = document.getElementById('result')
   let currentResult = resultNode.value
   // We have:
@@ -49,22 +54,33 @@ function showNextResult() {
   switch(lastOperation) {
     case "+":
       // Do something
-      resultNode.value = firstNumber + secondNumber
+      lastResult = firstNumber + secondNumber
       break
 
     case "-":
       // Do something
-      resultNode.value = firstNumber - secondNumber
+      lastResult = firstNumber - secondNumber
       break
 
     case "*":
-      resultNode.value = firstNumber * secondNumber
+      lastResult = firstNumber * secondNumber
       // Do something
       break
 
     case "/":
       // Do
-      resultNode.value = firstNumber / secondNumber
+      lastResult = firstNumber / secondNumber
       break
   }
+}
+
+function showResult() {
+  executeLastOperation()
+  let resultNode = document.getElementById('result')
+  resultNode.value = lastResult
+
+  // After clicking equals ans showing the result
+  // we want to restart, no saved operations/results
+  lastResult = null;
+  lastOperation = null;
 }
