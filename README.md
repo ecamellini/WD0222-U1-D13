@@ -23,10 +23,10 @@ Usually performed by different roles together:
 
 ### For the calculator
 
-https://en.wikipedia.org/wiki/User_story
-
 Let's write the requirements. We will use the format of
 user stories.
+
+https://en.wikipedia.org/wiki/User_story
 
 - As a user, I want to solve basic math operations, so that I don't have to think in order to get a result
 - As a user, I want the result of the previous operation to be preserved, so that I can solve a chain of operations
@@ -34,6 +34,7 @@ user stories.
 ## 2) UI / UX Design Phase
 
 https://en.wikipedia.org/wiki/User_interface_design
+
 https://en.wikipedia.org/wiki/User_experience_design
 
 UI / UX Designers design the user interface and user experience of the application.
@@ -44,7 +45,22 @@ The outputs of this phase are usually:
 - Interactive prototypes
 - Mockups
 
+Some tools widely used by designers in this phase:
+- https://www.figma.com/ for Mockups
+- https://www.uxpin.com/ or https://www.invisionapp.com/ for prototypes/wireframes
+- https://miro.com/ to facilitate discussions with customers/users
+
+### Calculator mockup
+
+Here's a mockup of our calculator:
+
+![Calculator](mockup.png)
+
 ## 3) Software Design Phase
+
+https://en.wikipedia.org/wiki/Software_design
+
+https://en.wikipedia.org/wiki/Software_architecture
 
 Software developers, engineers, architects, designing the architecture of the software.
 
